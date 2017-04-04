@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>前端开发作业</title>
+    <meta name="description" content="网易教育产品部">
+    <meta name="keywords" content="网易教育产品部，网易云课堂，网易公开课，中国大学MOOC">
+    <link href="styles/final.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 登录表单 -->
+    <div class="m-layer1 hidden">
+        <div class="mask"></div>
+        <table><tr><td>
+            <form class="m-form" action="http://study.163.com/webDev/login.htm">   
+                <p class="f-title">登录网易云课堂</p>
+                <div id="close-form"></div>
+                <input type="text" name="userName" id="userName" placeholder=" 账号">
+                <input type="text" name="password" id="password" placeholder=" 密码">
+                <button id="f-btn" type="submit">登 录</button>
+            </form>
+        </td></tr></table>
+    </div>
+    <!-- 视频弹窗 -->
+    <div class="m-layer2 hidden">
+        <div class="mask"></div>
+        <table><tr><td>
+            <div class="m-video">
+                <p class="v-title">请观看下面的视频</p>
+                <div id="close-video"></div>
+                <video src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" controls></video>
+            </div>
+        </td></tr></table>
+    </div>
+    <!-- 头部：通知条，关注，搜索 -->
+    <div class="g-header">
+        <div class="inform-bg">
+            <div class="m-inform  g-wrap clearfix">
+                <span class="intro-inform">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势!<span id="click-inform"> 立即查看&gt;</span></span>
+                <span id="close-inform"><span id="close-bg"></span>不再提醒</span>
+            </div>
+        </div>
+        <div class="m-nav  g-wrap">
+            <div class="follow">
+                <span class="logo"></span><span class="net-edu">网易教育产品部</span>
+                <span class="" id="f-btn1">+ 关注 </span>
+                <span class="hidden" id="f-btn2"><span class="icon"></span>已关注 | <a class="cancel" href="">取消</a></span>&nbsp;粉丝 45
+            </div>
+            <div class="nav">
+                <a  class="m-link" href="http://open.163.com/" target="_blank">网易公开课</a>
+                <a  class="m-link" href="http://study.163.com/" target="_blank">云课堂   </a>
+                <a  class="m-link" href="http://www.icourse163.org/" target="_blank">中国大学MOOC  </a>
+                <a href="#" class="find"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图，介绍，图片 -->
+    <div class="g-body1">
+        <div class="m-slide">
+            <div class="banner">
+                <a class="cur-slide" href="http://open.163.com/" target="_blank"><img src="images/banner1.jpg" alt="图片"></a>
+                <a class="" href="http://study.163.com/" target="_blank"><img src="images/banner2.jpg" alt="图片"></a>
+                <a class="" href="http://www.icourse163.org/" target="_blank"><img src="images/banner3.jpg" alt="图片"></a>
+            </div>  
+            <div class="pointer">
+                <span class="cur-point"></span><span></span><span></span>
+            </div>        
+        </div>
+        <div class="m-intro g-wrap">
+            <ul class="intro">
+                <li class="intro1">
+                    <div class="i-left"></div>
+                    <div class="i-right">
+                        <p class="i-title">网易公开课</p>
+                        <p class="i-content">推出国内外名校公开课，涉及广泛的学科，名师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+                        <a href="http://open.163.com/" target="_blank">了解更多&gt;</a>
+                    </div>
+                </li>
+                <li class="intro2">
+                    <div class="i-left"></div>
+                    <div class="i-right">
+                        <p class="i-title">云课堂</p>
+                        <p class="i-content">网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验，自由开放的交流互动环境。</p>
+                        <a href="http://study.163.com/" target="_blank">了解更多&gt;</a>
+                    </div>
+                </li>
+                <li class="intro3">
+                    <div class="i-left"></div>
+                    <div class="i-right">
+                        <p class="i-title">中国大学MOOC</p>
+                        <p class="i-content">是爱课程携手云课堂打造的在线学习平台，每一个有提升愿望的人，都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+                        <a href="http://www.icourse163.org/" target="_blank">了解更多&gt;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="m-gallary">
+            <ul>
+                <li class="fir-photo"><img src="images/photo1.jpg" alt="图片"></li>
+                <li><img src="images/photo2.jpg" alt="图片"></li>
+                <li><img src="images/photo3.jpg" alt="图片"></li>
+                <li><img src="images/photo4.jpg" alt="图片"></li>
+                <li><img src="images/photo5.jpg" alt="图片"></li>
+            </ul>
+        </div>
+    </div> 
+    <!-- 主要内容 -->
+    <div class="g-body2 g-wrap">
+    <!-- 课程信息展示 -->
+        <div class="m-main">
+            <div class="m-title">
+                <span id="product" class="cur-tab">产品设计</span><span id="code">编程语言</span>
+            </div>
+            <div class="m-container">
+                <!-- <div class="m-course">
+                    <img src="" alt="图片">
+                    <p class="c-name">混音全揭秘 舞曲实战篇 揭秘音乐揭秘音乐揭秘音乐</p>
+                    <p class="c-provider">音频帮</p>
+                    <p class="c-num"><span></span>510</p>
+                    <p class="c-price">&nbsp;¥ 800.00</p>
+                    <div class="c-layer">
+                        <div class="l-head">
+                            <img src="" alt="">
+                            <div class="l-right">
+                                <p class="l-name">手绘画系列教程</p>
+                                <p class="l-num"><span></span>57人在学</p>
+                                <p class="l-provider">发布者：几分钟网</p>
+                                <p class="l-category">分类：手绘设计</p>
+                            </div>
+                        </div>
+                        <div class="l-description"><p>生活中不乏有很多美好的画面，何不用画笔记录下来呢？那么就跟几分钟网一起来记录美好画面吧!</p></div>
+                    </div>
+                </div>  -->
+            </div>
+            <ul class="pages">
+                <li class="cur-page">1</li>
+               <!--  <li class="left-icon">&lt;</li><li class="cur-page">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li class="right-icon">&gt;</li> -->
+            </ul>
+        </div>
+        <div class="m-side">
+            <div class="video">
+                <div class="v-title">机构介绍</div>
+                <div class="v-content">
+                    <p>观看下面的视频来了解吧：</p>
+                    <a href="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" id="play-video"><img src="images/video.jpg" alt="图片"></a>
+                </div>
+            </div>
+            <div class="toplist">
+                <div class="t-title">最热排行</div>
+                <div class="t-content">
+                    <div class="t-container">
+                        <!-- <div class="t-course">
+                            <img src="" alt="">
+                            <p class="t-name">舞曲揭秘舞曲揭秘舞曲揭秘</p>
+                            <p class="t-num"><span class="t-logo"></span> 21567</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- 底部信息 -->
+    <div class="g-footer">
+        <div class="m-footer g-wrap">
+            <div class="foot-left">
+                <p class="f-logo">EDU<span class="net-ease">|网易教育产品部</span></p>
+                <div class="copyright">
+                    <p>©2014 icourse163.org 浙ICP备08114786号-1</p>
+                    <p>icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+                </div>
+            </div>
+            <div class="foot-right">
+                <ul class="f-links">
+                    <li>友情链接：</li>
+                    <li><a href="http://open.163.com/" target="_blank">网易公开课</a></li>
+                    <li><a href="http://study.163.com/" target="_blank">网易云课堂</a></li>
+                    <li><a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a></li>
+                </ul>
+                <ul class="us">
+                    <li>我们：</li>
+                    <li><a href="">关于</a></li>
+                    <li><a href="">联系</a></li>
+                    <li><a href="">关注 <span class="weibo"></span></a></li>
+                </ul>
+                <ul class="more">
+                    <li>更多：</li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">意见反馈</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/basic.js"></script>  
+    <script src="scripts/script.js"></script>
+    <script src="scripts/md5.js"></script>
+</body>
+</html>
