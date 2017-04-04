@@ -1,0 +1,739 @@
+/*reset*/
+*{margin: 0;padding: 0;}
+html,body{
+    width: 100%;
+    font: 10px/10px Microsoft YaHei;
+    background-color: #f8f8f8;
+}
+img{border:0;}
+a{text-decoration: none;}
+li{list-style:none;}
+button,input{outline: 0;border: 0;}
+table{border-collapse:collapse;border-spacing:0;}
+th{text-align:left;font-weight:normal;}
+
+/*隐藏*/
+.hidden{
+    display: none !important;
+}
+
+/* 清除浮动 */
+.clearfix:after{
+    content : "." ; 
+    display: block; 
+    clear: both; 
+    height: 0; 
+    overflow: hidden; 
+    visibility: hidden;
+}
+.clearfix{
+    zoom: 1;
+}
+
+/*布局动态适应(宽度不填满部分)兼容ie8*/
+.g-wrap{
+    width: 1205px;
+    margin: 0 auto;   
+}
+@media screen and (max-width: 1204px){
+    .g-wrap{
+        width: 965px;
+    }
+}
+.ie8 .g-wrap{
+    width: 965px;
+}
+
+/*遮罩*/
+.mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.8;
+    filter: Alpha(opacity=80);
+}
+/*登录表单*/
+.m-layer1{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.m-layer1 table{
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+.m-form{
+    position: relative;
+    margin: 0 auto;
+    width: 387px;
+    height: 288px;
+    background-color: #ffffff;
+}
+.m-form #close-form{
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    width: 10px;
+    height: 10px;
+    background: url(../images/sprite.png)  0 -10px no-repeat;
+    cursor: pointer;
+}
+.m-form .f-title{
+    height: 28px;
+    margin: 0 20px 20px 40px;
+    padding-top: 20px;
+    font: bold 18px/28px Microsoft Yahei;
+    color: #444444;
+}
+.m-form input{
+    display: block;
+    width: 291px;
+    height: 41px;
+    margin: 20px 53px 17px 40px;
+    border: 2px solid #f1f1f1;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    outline: 1px solid #dfdfdf;
+    font:16px/28px Microsoft Yahei;
+    color: #cccccc;
+}
+.m-form button{
+    display: block;
+    width: 293px;
+    height: 46px;
+    margin: 30px 54px 40px 40px;
+    background: url(../images/sprite.png) 0 -129px no-repeat;
+    box-shadow: 2px 2px #d5e3da;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*视频弹窗*/
+.m-layer2{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+}
+.m-layer2 table{
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+.m-video{
+    position: relative;
+    margin: 0 auto;
+    width: 950px;
+    height: 676px;
+    background-color: #ffffff;
+}
+.m-video #close-video{
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    width: 10px;
+    height: 10px;
+    background: url(../images/sprite.png)  0 -10px no-repeat;
+    cursor: pointer;
+}
+.m-video .v-title{
+    height: 28px;
+    margin: 0 25px 20px 40px;
+    padding-top: 20px;
+    font: bold 18px/28px Microsoft Yahei;
+    color: #444444;
+}
+.m-video video{
+    width: 889px;
+    height: 567px;
+    margin-left: 40px;
+}
+
+
+
+/*通知条*/
+.inform-bg{
+    background-color: #f3f3f3;
+    height: 36px;
+}
+.m-inform{
+    font: 12px/22px microsoft yahei;
+    color: #333333;
+    padding: 7px 0;
+}
+.m-inform .intro-inform{
+    float: left;
+}
+.m-inform #close-inform{
+    float:right;
+    cursor: pointer;
+}
+.m-inform #click-inform{
+    color: #21a557;
+    cursor: pointer;
+}
+.m-inform #close-bg{
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 6px;
+    background: url(../images/sprite.png) no-repeat;
+}
+
+/*关注，搜索*/
+.m-nav{
+    height: 89px;
+    position: relative;
+}
+.m-nav .follow{
+    display: inline-block;
+    position: absolute;
+    height: 20px;
+    bottom: 37px;
+    font:12px/20px SimSun;
+}
+.follow .logo{
+    display: inline-block;
+    width: 70px;
+    height: 19px;
+    margin-right: 13px;
+    background: url(../images/sprite.png) -68px 0 no-repeat;
+    vertical-align: -5px;
+}
+.follow .net-edu{
+    display: inline-block;
+    font:22px/20px Hiragino Sans GB W3;
+    margin-right: 31px;
+    vertical-align: -4px;
+}
+.follow #f-btn1{
+    display: inline-block;
+    width: 54px;
+    background-color: #21a557;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+}
+.follow #f-btn1:hover{
+    background-color: #2fb556;
+}
+.follow #f-btn2{
+    display: inline-block;
+    width: 104px;
+    border: 1px solid #efefef;
+    background-color: #f8f8f8;
+}
+#f-btn2 .icon{
+    display: inline-block;
+    width: 11px;
+    height: 8px;
+    background: url(../images/sprite.png) 0 -23px no-repeat;
+    margin-right: 5px;
+    margin-left: 6px;
+}
+#f-btn2 .cancel,#f-btn2 .cancel:visited{
+    color: #999999;
+}
+#f-btn2 .cancel:hover{
+    color: #21a557;
+    text-decoration: underline;
+}
+
+.m-nav .nav{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: 37px;
+}
+.nav .m-link{
+    margin-left:55px;
+    font: 16px Hiragino Sans GB W3;
+    color: #666666;
+
+}
+.nav .m-link:visited{
+    color: #666666;
+}
+.nav .m-link:hover{
+    color: #21a557;
+}
+
+.nav .find{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/sprite.png) -18px 0 no-repeat;
+    margin-right: 12px;
+    margin-left: 30px;
+}
+.nav .find:hover{
+    background: url(../images/sprite.png) -40px 0 no-repeat;
+}
+
+
+/*轮播图*/
+.m-slide{
+    position: relative;
+    width: 100%;
+    height: 460px;
+    
+}
+.m-slide .banner a{
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: "Alpha(opacity=0)";
+}
+.m-slide .banner a img{
+    position: relative;
+    left: 50%;
+    margin-left: -826px;
+}
+.m-slide .banner a[class=cur-slide]{
+    opacity: 1;
+    filter: "Alpha(opacity=100)";   
+    z-index: 1;
+}
+.m-slide .pointer{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    margin-left: -26px;
+}
+.pointer span{
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 11px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.pointer .cur-point{
+    background-color: #000;
+}
+
+/*介绍*/
+.m-intro{
+    height: 177px;
+    padding: 60px 0;
+}
+.m-intro ul li{
+    display: inline-block;  
+}
+.intro .i-left{
+    float: left;
+    margin: 8px 0 50px 5px;
+    width: 80px;
+    height: 80px;
+}
+.intro1 .i-left{
+    background: url(../images/sprite.png) 0 -49px  no-repeat;
+}
+.intro2 .i-left{
+    background: url(../images/sprite.png) -80px -49px  no-repeat;
+}
+.intro3 .i-left{
+    background: url(../images/sprite.png) -160px -49px  no-repeat;
+}
+.i-right{
+    margin-left: 105px;
+    width: 250px;
+    margin-right: 65px;
+}
+@media screen and (max-width: 1205px){
+    .i-right{
+        width: 170px;
+    }
+}
+.ie8 .i-right{
+    width: 170px;
+}
+.intro3 .i-right{ margin-right: 0px;}
+.i-right .i-title{
+    margin-bottom: 10px;
+    font:22px/20px Microsoft YaHei;
+    color: #333333;
+}
+.i-right .i-content{
+    margin-bottom: 20px;
+    font: 14px/24px Microsoft YaHei;
+    color: #666666;
+}
+.i-right a,.i-right a:visited{
+    font: 14px/24px Microsoft YaHei;
+    color: #21a557;
+}
+.i-right a:hover{ text-decoration: underline;}
+
+/*图片*/
+.m-gallary{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.m-gallary ul{
+    position: relative;
+    width: 1616px;  
+    left: 50%;
+    margin-left: -808px;
+}
+.m-gallary ul li{
+    float: left;
+    margin-left: 4px;
+}
+.m-gallary ul .fir-photo{ margin-left: 0;}
+
+/*主要内容*/
+.g-body2{
+    height: 1351px;
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+}
+/*课程*/
+.g-body2 .m-main{
+    position: relative;
+    float: left;
+    height: 1344px;
+}
+.m-main .m-title{
+    width: 400px;
+    height: 51px;
+    border:1px solid #ecebeb;
+    border-top: 0;
+    margin-bottom: 27px;
+}
+#product,#code{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    border-bottom: 1px solid #d4d3d3;
+    font-size: 20px;
+    color: #666666;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.m-title .cur-tab{
+    background-color: #39a030;
+    color: #ffffff !important;
+}
+.m-container{
+    width: 980px;
+}
+@media screen and (max-width: 1205px){
+    .m-container{
+        width: 735px;
+    }
+}
+.ie8 .m-container{
+    width: 735px;
+}
+/*课程卡片*/
+.m-container .m-course{
+    position: relative;
+    display: inline-block;
+    width: 225px;
+    height: 229px;
+    margin-right: 18px;
+    margin-bottom: 19px;
+    border: 1px solid #f1f1f1;
+    border-top-color: #f8f8f8;
+    background-color: #ffffff;
+    font-size: 12px;
+    line-height: 12px; 
+}
+.m-course:hover{
+    border: 1px solid #e6e6e6;
+}
+.m-course img{
+    width: 223px;
+    height: 124px;
+    margin: 1px 1px 10px 1px;
+}
+.m-course:hover .c-name{
+    color: #39a030;
+}
+.m-course .c-name{
+    margin-left: 5px;
+    margin-right: 10px;
+    color: #333333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.m-course .c-provider{
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: #999999;
+}
+.m-course .c-num{
+    display: inline-block;
+    height: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 1px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: #999999;
+    line-height: 16px;
+}
+.m-course .c-num span{
+    display: inline-block;
+    width: 9px;
+    height: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background: url(../images/sprite.png) -58px 0 no-repeat;
+}
+.m-course .c-price{
+    padding-bottom: 9px;
+    color: #ff3f00;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/*浮层*/
+.c-layer{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    width: 479px;
+    /*height: 238px;*/
+    border: 1px solid #c1c0c0;
+    outline: 1px solid #e4e4e4;
+    color: #666666;
+}
+.c-layer .l-head{
+    background-color: #ffffff;
+    height: 155px;
+}
+.l-head img{
+    float: left;
+    margin: 11px 19px 20px 11px;
+    width: 223px;
+    height: 124px;
+}
+.l-head .l-right{
+    padding-top: 11px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.l-right .l-name{
+    color: #333333;
+    font-size: 18px;
+    
+}
+.l-right .l-num{
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+.l-right .l-num span{
+    display: inline-block;
+    width: 9px;
+    height: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background: url(../images/sprite.png) -58px 0 no-repeat;
+}
+.c-layer .l-description{
+    display: table;
+    min-height: 83px;
+    background-color: #f8f8f8;
+    padding-left: 21px;
+    padding-right: 33px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.l-description p{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*翻页器*/
+.m-main ul{
+    position: absolute;
+    right: 18px;
+    bottom: 0;
+    text-align: center;
+}
+.m-main ul li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    font: 14px/20px Microsoft YaHei;
+    color: #666666;
+    cursor: pointer;
+}
+.m-main ul .left-icon,.m-main ul .right-icon{
+    background-color: #9dd8b1;
+    width: 30px;
+    color: #ffffff;
+}
+.m-main ul li:hover{
+    background-color: #9dd8b1;
+    color: #ffffff;
+}
+.m-main ul .cur-page{
+    color: #39a030;
+}
+
+/*介绍视频*/
+.g-body2 .m-side{
+    float: right;
+}
+.m-side .video{
+    width: 223px;
+    height: 230px;
+    border: 1px solid #ecebeb;
+    border-top-color: #f8f8f8;
+}
+.m-side .video:hover{
+    border-color: #d4d3d3;
+}
+.m-side .video .v-title{
+    height: 55px;
+    border-bottom: 1px solid #dddddd;
+    padding-left: 20px;
+    font: 16px/55px Microsoft YaHei;
+    color: #333333;
+}
+.m-side .video .v-content{
+    height: 163px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font: 14px/34px Microsoft YaHei;
+    color: #666666;
+    border-bottom: 1px solid #d4d3d3;
+}
+/*排行*/
+.m-side .toplist{
+    width: 223px;
+    height: 778px;
+    border: 1px solid #ecebeb;
+    border-top-color: #f8f8f8;
+    margin-top: 19px;
+}
+.m-side .toplist:hover{
+    border-color: #d4d3d3;
+}
+.m-side .toplist .t-title{
+    height: 56px;
+    border-bottom: 1px solid #eeeeee;
+    padding-left: 20px;
+    font: 16px/56px Microsoft YaHei;
+    color: #333333;
+}
+.m-side .toplist .t-content{
+    position: relative;
+    height: 720px;
+    overflow: hidden;
+    font: 14px/16.8px Microsoft YaHei;
+    color: #333333;
+    border-bottom: 1px solid #d4d3d3;
+}
+.t-content .t-container{
+    position: absolute;
+    top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 183px;
+}
+.t-container .t-course{
+    height: 50px;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 16.8px;
+}
+.t-course img{
+    float: left;
+    margin-right: 12px;
+    width: 50px;
+    height: 50px;
+}
+.t-course .t-name{
+    color: #333333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+.t-course .t-num{
+    color: #999999;
+}
+.t-course .t-num span{
+    display: inline-block;
+    width: 9px;
+    height: 10px;
+    background: url(../images/sprite.png) -58px 0 no-repeat;
+}
+/*底部*/
+.g-footer{
+    height: 262px;
+    background-color: #2c3339;
+}
+.m-footer{ position: relative;}
+.m-footer .foot-left{
+    position: absolute;
+    top: 92px;
+    left: 51px;
+}
+.foot-left .f-logo{ 
+    margin-bottom: 24px;
+    font: bold 28px/20px Gill Sans MT;
+    color: #39a030;
+}
+.foot-left .f-logo .net-ease{ 
+    font:22px/20px Hiragino Sans GB W3;
+    vertical-align: 2px;
+}
+.foot-left .copyright{
+    font-size: 12.5px;
+    line-height: 25px;
+    color: #ffffff;
+    opacity: 0.6;
+    filter: Alpha(opacity=60);
+}  
+.m-footer .foot-right{
+    position: absolute;
+    top: 74px;
+    left: 550px;
+    font-size: 12.5px;
+    line-height: 29.17px;
+    color: #ffffff;
+    opacity: 0.6;
+    filter: Alpha(opacity=60);  
+}
+.foot-right ul{
+    display: inline-block;
+    vertical-align: top;
+}
+.foot-right li{ width: 100%;}
+.foot-right .f-links{ width: 210px;}
+.foot-right .us{ width: 135px;}
+.foot-right .more{ width: 60px;}
+.foot-right .us .weibo{
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    background: url(../images/sprite.png) 0 -33px no-repeat;
+    vertical-align: text-bottom;
+}
+.foot-right a:visited{ 
+    color: #ffffff;
+}
+.foot-right a:hover{ text-decoration: underline;}
